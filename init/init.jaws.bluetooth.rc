@@ -8,3 +8,6 @@ import /vendor/etc/init/hw/init.xiaomi.bt_pf_server.rc
 on init
     # Do not use DroidLogic's Bluetooth HAL
     stop vendor.bluetooth-1-1-droidlogic
+
+on post-fs-data
+    write /sys/power/wake_lock jaws-staywake
