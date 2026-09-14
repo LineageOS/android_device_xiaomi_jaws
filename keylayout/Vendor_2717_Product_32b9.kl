@@ -1,0 +1,124 @@
+# Copyright (C) 2013 The Android Open Source Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# BLE Remote layout file for xiaomi Remote keyboards.
+
+# This file is intentionally very generic and is intended to support a broad rang of keyboards.
+# Do not edit the generic key layout to support a specific keyboard; instead, create
+# a new key layout file with the required keyboard configuration.
+#
+key 116   POWER
+key 582   ASSIST
+key 144   ASSIST
+key 103   DPAD_UP
+key 108   DPAD_DOWN
+key 105   DPAD_LEFT
+key 106   DPAD_RIGHT
+key 28    DPAD_CENTER
+key 353   DPAD_CENTER
+key 172   HOME
+key 102   HOME
+key 158   BACK
+key 127   MENU
+key 139   MENU
+key 577   SETTINGS
+key 115   VOLUME_UP
+key 114   VOLUME_DOWN
+key 88    F12
+key 2     1
+key 3     2
+key 4     3
+key 5     4
+key 6     5
+key 7     6
+key 8     7
+key 9     8
+key 10    9
+key 11    0
+key 167   TV_INPUT
+key 136   TV_TELETEXT
+key 166   PROG_RED
+key 161   PROG_GREEN
+key 410   PROG_YELLOW
+key 217   PROG_BLUE
+key 358   INFO
+key 173   BACK
+key 113   VOLUME_MUTE
+#####ALL APPS############
+#####KEY_MI##############
+key 399   BUTTON_4
+key 580   BUTTON_5
+key 150   BUTTON_5
+#####KEY_NETFLIX#########
+key 240   BUTTON_6
+key 416   BUTTON_6
+#key 393   BUTTON_6
+#####KEY_PRIMEVIDEO######
+#key 207   BUTTON_2
+key 207   BUTTON_7
+#####KEY_LIVETV##########
+#####KEY_CHLIST##########
+key 393   BUTTON_3
+key 156   BUTTON_9
+#####KEY_ALLAPPS#########
+#key 216   BUTTON_10
+key 216   ALL_APPS
+#####AUIDO###############
+key 392   MITV_TV_AUDIO
+
+key 174     BACK
+key 402     CHANNEL_UP
+key 403     CHANNEL_DOWN
+key 58      TV_TELETEXT
+
+######PERIOD,CAPTIONS######
+key 52     PERIOD
+key 140    CAPTIONS
+key 219    GUIDE
+
+######wink,kion,ivi,okko,kinopoisk,rutube######
+key 379     BUTTON_10
+key 366     BUTTON_11
+key 433     BUTTON_12
+key 152     BUTTON_13
+key 579     BUTTON_14
+key 426     BUTTON_16
+
+######hotstar######
+key 421     BUTTON_15
+
+######youtube######
+key 425     BUTTON_3
+
+######vkvideo######
+key 423     BUTTON_1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
