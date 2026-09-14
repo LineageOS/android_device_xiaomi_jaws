@@ -1,4 +1,4 @@
 ## All firmware from this list, unless pinned and noted as otherwise,
-## are from YOC (URO4.260304.011.B1).
+## are from jaws (V816.0.26.4.17.UZFAABX).
 
 bootloader.img;AB
