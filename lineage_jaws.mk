@@ -16,14 +16,14 @@ $(call inherit-product, vendor/lineage/config/common_full_tv.mk)
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_BRAND := Amlogic
-PRODUCT_DEVICE := oppen
-PRODUCT_GMS_CLIENTID_BASE := android-onn-tv
-PRODUCT_MANUFACTURER := Amlogic
-PRODUCT_MODEL := oppen
-PRODUCT_NAME := lineage_oppen
+PRODUCT_BRAND := Xiaomi
+PRODUCT_DEVICE := jaws
+PRODUCT_GMS_CLIENTID_BASE := android-xiaomi-tv
+PRODUCT_MANUFACTURER := Xiaomi
+PRODUCT_MODEL := MiTV-AFKR0
+PRODUCT_NAME := lineage_jaws
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="onn_4k_gtv-user 14 URO4.260304.011.B1 15051976 release-keys" \
-    BuildFingerprint=onn/onn_4k_gtv/YOC:14/URO4.260304.011.B1/15051976:user/release-keys \
-    SystemName=oppen
+    BuildDesc="jaws-user 14 UKG3.250107.001 V816.0.26.4.17.UZFAABX release-keys" \
+    BuildFingerprint=Xiaomi/jaws/jaws:14/UKG3.250107.001/V816.0.26.4.17.UZFAABX:user/release-keys \
+    SystemName=jaws
