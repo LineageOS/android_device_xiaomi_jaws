@@ -14,12 +14,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.amlogic.wifi_buildin.rc
 
-## Keylayout (IR)
+## Keylayout
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/keylayout/Vendor_0957_Product_002d.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0957_Product_002d.kl \
-    $(LOCAL_PATH)/keylayout/Vendor_0957_Product_0026.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0957_Product_0026.kl \
-    $(LOCAL_PATH)/keylayout/Vendor_0957_Product_003f.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0957_Product_003f.kl \
-    $(LOCAL_PATH)/keylayout/Vendor_0957_Product_0031.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0957_Product_0031.kl
+    $(LOCAL_PATH)/keylayout/Vendor_0001_Product_0001.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0001_Product_0001.kl \
+    $(LOCAL_PATH)/keylayout/Vendor_2717_Product_32b9.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_2717_Product_32b9.kl
 
 ## Netflix
 PRODUCT_PACKAGES += \
@@ -27,7 +25,7 @@ PRODUCT_PACKAGES += \
     NetflixConfigOverlayTarget
 
 ## Platform
-TARGET_AMLOGIC_SOC := s4
+TARGET_AMLOGIC_SOC := sc2
 
 ## Soong Namespaces
 PRODUCT_SOONG_NAMESPACES += \
@@ -40,4 +38,4 @@ include hardware/realtek/wlan/wlan.mk
 $(call inherit-product, device/amlogic/ne-common/ne.mk)
 
 ## Inherit from the proprietary files makefile
-$(call inherit-product, vendor/amlogic/oppen/oppen-vendor.mk)
+$(call inherit-product, vendor/xiaomi/jaws/jaws-vendor.mk)
