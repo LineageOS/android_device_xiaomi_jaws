@@ -27,7 +27,7 @@ PRODUCT_PACKAGES += \
     NetflixConfigOverlayTarget
 
 ## Platform
-TARGET_AMLOGIC_SOC := s4
+TARGET_AMLOGIC_SOC := sc2
 
 ## Soong Namespaces
 PRODUCT_SOONG_NAMESPACES += \
@@ -40,4 +40,4 @@ include hardware/realtek/wlan/wlan.mk
 $(call inherit-product, device/amlogic/ne-common/ne.mk)
 
 ## Inherit from the proprietary files makefile
-$(call inherit-product, vendor/amlogic/oppen/oppen-vendor.mk)
+$(call inherit-product, vendor/xiaomi/jaws/jaws-vendor.mk)
