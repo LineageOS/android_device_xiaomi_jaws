@@ -1,0 +1,22 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+# The USB-A port can only take one role at a time, and a PC can only
+# be detected while it is a device, so in recovery mode:
+#  1. release the ID line, so a connected PC enumerates adb;
+#  2. if nothing enumerated it after a few seconds, drive it low again,
+#     which hands the port back to the host (USB keyboards, sticks).
+on init
+    write /sys/class/gpio/export 474
+    write /sys/class/gpio/gpio474/direction in
+
+on boot
+    start usb_role_select
+
+service usb_role_select /system/bin/sh -c "sleep 8; s=$$(cat /sys/class/udc/fdd00000.dwc2_a/state); case $$s in 'not attached') echo out > /sys/class/gpio/gpio474/direction; echo usb_role_select: no host detected, switched to USB host > /dev/kmsg;; *) echo usb_role_select: host detected, state=$$s, keeping adb > /dev/kmsg;; esac"
+    oneshot
+    disabled
+    user root
+    seclabel u:r:recovery:s0

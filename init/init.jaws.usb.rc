@@ -1,0 +1,21 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+# Ported from stock (vendor/etc/init/hw/init.mitv.rc). gpio474 (GPIOH_8)
+# drives the ID line of the only USB-A port: driven low, the PHY selects
+# host (OTG); released, it is pulled high and the PHY selects device, so
+# adb works over USB.
+on boot
+    write /sys/class/gpio/export 474
+    write /sys/class/gpio/gpio474/direction out
+
+on property:init.svc.adbd=running && property:ro.boot.otg_device=0
+    write /sys/class/gpio/gpio474/direction in
+
+on property:init.svc.adbd=running && property:ro.boot.otg_device=2
+    write /sys/class/gpio/gpio474/direction out
+
+on property:init.svc.adbd=stopped
+    write /sys/class/gpio/gpio474/direction out
