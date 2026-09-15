@@ -1,0 +1,17 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+# The PHY starts in device mode long enough to detect an already-connected
+# upstream host, then selects host mode when none is present so a keyboard can
+# be used to navigate recovery. Switch back to device mode when the user
+# enables ADB, or when recovery enters another USB gadget mode.
+on property:ro.adb.secure.recovery=0
+    write /sys/class/usb_role/amlogic-usb-role-switch/role device
+
+on property:sys.usb.config=fastboot
+    write /sys/class/usb_role/amlogic-usb-role-switch/role device
+
+on property:sys.usb.config=sideload
+    write /sys/class/usb_role/amlogic-usb-role-switch/role device
