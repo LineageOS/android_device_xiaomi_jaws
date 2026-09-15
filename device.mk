@@ -12,7 +12,9 @@ PRODUCT_PACKAGES += \
 
 ## Init
 PRODUCT_PACKAGES += \
-    init.amlogic.wifi_buildin.rc
+    init.amlogic.wifi_buildin.rc \
+    init.jaws.usb.rc \
+    init.recovery.jaws.rc
 
 ## Keylayout
 PRODUCT_COPY_FILES += \

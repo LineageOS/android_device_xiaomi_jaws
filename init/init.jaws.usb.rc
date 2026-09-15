@@ -1,0 +1,18 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+# Preserve stock's adbd-driven policy during a normal Android boot. The PHY
+# owns GPIOH_8 and exposes the USB role-switch interface: adbd selects device
+# mode for otg_device=0 and host mode for otg_device=2, while stopping adbd
+# selects host mode. Each write cancels the PHY's boot-time automatic policy;
+# force_normal_boot keeps these rules from overriding recovery's detection.
+on property:init.svc.adbd=running && property:ro.boot.otg_device=0 && property:ro.boot.force_normal_boot=1
+    write /sys/class/usb_role/amlogic-usb-role-switch/role device
+
+on property:init.svc.adbd=running && property:ro.boot.otg_device=2 && property:ro.boot.force_normal_boot=1
+    write /sys/class/usb_role/amlogic-usb-role-switch/role host
+
+on property:init.svc.adbd=stopped && property:ro.boot.force_normal_boot=1
+    write /sys/class/usb_role/amlogic-usb-role-switch/role host

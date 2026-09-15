@@ -1,0 +1,18 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+# Leave the PHY's automatic recovery policy active: start in device mode, wait
+# eight seconds for a DWC2 gadget connection, and remain there while an upstream
+# host is connected. If no host connects, or the host disconnects, switch to
+# host mode so a keyboard can navigate recovery. The gadget selections below
+# force device mode and cancel automatic role selection.
+on property:ro.adb.secure.recovery=0
+    write /sys/class/usb_role/amlogic-usb-role-switch/role device
+
+on property:sys.usb.config=fastboot
+    write /sys/class/usb_role/amlogic-usb-role-switch/role device
+
+on property:sys.usb.config=sideload
+    write /sys/class/usb_role/amlogic-usb-role-switch/role device
