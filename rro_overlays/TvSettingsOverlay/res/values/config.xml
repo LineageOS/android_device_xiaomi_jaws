@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Xiaomi BLE remotes don't advertise a usable class of device; names
+         from stock vendor/etc/bluetooth/bt_rc_name.conf. -->
+    <string-array name="config_input_device_names" translatable="false">
+        <item>MI RC</item>
+        <item>Xiaomi RC</item>
+        <item>Xiaomi Remote</item>
+        <item>小米蓝牙遥控器</item>
+        <item>小米语音遥控器</item>
+        <item>小米蓝牙语音遥控器</item>
+        <item>小米语音触控遥控器</item>
+        <item>小米语音金属遥控器</item>
+    </string-array>
+</resources>
