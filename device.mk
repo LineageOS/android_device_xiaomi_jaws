@@ -5,7 +5,8 @@
 
 ## Bluetooth
 PRODUCT_PACKAGES += \
-    BluetoothOverlayTarget
+    BluetoothOverlayTarget \
+    TvSettingsOverlayTarget
 
 ## Init
 PRODUCT_PACKAGES += \

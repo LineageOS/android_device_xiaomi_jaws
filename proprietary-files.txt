@@ -43,6 +43,32 @@ vendor/bin/hw/android.hardware.oemlock@1.0-service.droidlogic
 vendor/etc/init/android.hardware.oemlock@1.0-service.droidlogic.rc
 vendor/etc/vintf/manifest/android.hardware.oemlock@1.0-service.droidlogic.xml
 
+## Remote Control
+vendor/etc/bluetooth/Vendor_2717_Product_32b9_Attribute_a0_00_Update.bin
+vendor/etc/bluetooth/Vendor_2717_Product_32b9_Attribute_a0_0e_Update.bin
+vendor/etc/bluetooth/Vendor_2717_Product_32b9_Attribute_a0_0f_Update.bin
+vendor/etc/bluetooth/Vendor_2717_Product_32b9_Attribute_a0_10_Update.bin
+vendor/etc/bluetooth/Vendor_2717_Product_32b9_Attribute_a0_12_Update.bin
+vendor/etc/bluetooth/Vendor_2717_Product_32b9_Attribute_a0_13_Update.bin
+vendor/etc/bluetooth/Vendor_2717_Product_32b9_Attribute_a0_14_Update.bin
+vendor/etc/bluetooth/Vendor_2717_Product_32b9_Attribute_a0_15_Update.bin
+vendor/etc/bluetooth/Vendor_2717_Product_32b9_Attribute_a0_17_Update.bin
+vendor/etc/bluetooth/Vendor_2717_Product_32b9_Attribute_a0_18_Update.bin
+vendor/etc/bluetooth/Vendor_2717_Product_32b9_Attribute_a0_19_Update.bin
+vendor/etc/bluetooth/Vendor_2717_Product_32b9_Attribute_a0_20_Update.bin
+vendor/etc/bluetooth/Vendor_2717_Product_32b9_Attribute_a0_21_Update.bin
+vendor/etc/bluetooth/Vendor_2717_Product_32b9_Attribute_a0_23_Update.bin
+vendor/etc/bluetooth/Vendor_2717_Product_32b9_Attribute_a0_24_Update.bin
+vendor/etc/bluetooth/Vendor_2717_Product_32b9_Attribute_a0_30_Update.bin
+vendor/etc/bluetooth/Vendor_2717_Product_32b9_Attribute_a0_31_Update.bin
+vendor/etc/bluetooth/Vendor_2717_Product_32b9_Attribute_a0_32_Update.bin
+vendor/etc/bluetooth/Vendor_2717_Product_32b9_Attribute_a0_33_Update.bin
+vendor/etc/bluetooth/Vendor_2717_Product_32b9_Attribute_a0_34_Update.bin
+vendor/etc/bluetooth/Vendor_2717_Product_32b9_Attribute_a0_35_Update.bin
+vendor/etc/bluetooth/Vendor_2717_Product_32b9_Attribute_a0_Update.bin
+vendor/etc/bluetooth/Vendor_2717_Product_32b9_Attribute_a1_23_Update.bin
+vendor/etc/bluetooth/Vendor_2717_Product_32b9_Attribute_a1_25_Update.bin
+
 ## TEE
 vendor/bin/hw/android.hardware.security.keymint-service.amlogic
 vendor/etc/init/android.hardware.security.keymint-service.amlogic.rc
