@@ -4,9 +4,6 @@
 #
 
 ## Bluetooth
-BOARD_HAVE_BLUETOOTH_RTK_TV := true
-include hardware/realtek/rtkbt/rtkbt.mk
-
 PRODUCT_PACKAGES += \
     BluetoothOverlayTarget
 
@@ -30,9 +27,6 @@ TARGET_AMLOGIC_SOC := sc2
 ## Soong Namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
-
-## Wi-Fi
-include hardware/realtek/wlan/wlan.mk
 
 ## Inherit from the common tree product makefile
 $(call inherit-product, device/amlogic/ne-common/ne.mk)
