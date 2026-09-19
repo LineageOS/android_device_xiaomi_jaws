@@ -4,15 +4,11 @@
     "target_path": "device/amlogic/ne-common"
   },
   {
+    "repository": "android_kernel_amlogic_mtk-drivers_mt7663u",
+    "target_path": "kernel/platform/kernel-5.15/vendor/amlogic/mtk-drivers/mt7663u"
+  },
+  {
     "repository": "android_kernel_xiaomi_jaws-build",
     "target_path": "kernel/platform/kernel-5.15/vendor/xiaomi/jaws-build"
-  },
-  {
-    "repository": "android_kernel_amlogic_realtek-drivers_8822cs",
-    "target_path": "kernel/platform/kernel-5.15/vendor/amlogic/realtek-drivers/8822cs"
-  },
-  {
-    "repository": "android_hardware_realtek",
-    "target_path": "hardware/realtek"
   }
 ]
