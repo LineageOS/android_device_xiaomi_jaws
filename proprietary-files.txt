@@ -9,6 +9,20 @@ odm/lib/libHwAudio_dtshd.so;DISABLE_CHECKELF
 vendor/etc/mesondisplay.cfg
 vendor/etc/mesondisplay.cfg:recovery/root/system/etc/mesondisplay.cfg
 
+## Bluetooth
+vendor/bin/hw/android.hardware.bluetooth@1.1-service-xiaomi
+vendor/bin/bt_platform_server
+vendor/etc/init/hw/init.xiaomi.bt_pf_server.rc
+vendor/etc/init/android.hardware.bluetooth@1.1-service-xiaomi.rc
+vendor/lib/android.hardware.bluetooth@1.0-impl-xiaomiex.so
+vendor/lib/libbluetooth_mtk_mi.so
+vendor/lib/libbt-vendor-mtk.so
+
+## Bluetooth firmware
+vendor/firmware/bt_7663.cfg:vendor/lib/firmware/bt_7663.cfg
+vendor/firmware/mt7663_usb/mt7663_patch_e1_hdr.bin:vendor/lib/firmware/mt7663_patch_e1_hdr.bin
+vendor/firmware/mt7663_usb/mt7663_patch_e2_hdr.bin:vendor/lib/firmware/mt7663_patch_e2_hdr.bin
+
 ## DRM
 vendor/lib/libamavutils.so
 vendor/lib/liboemcrypto.so
@@ -50,3 +64,14 @@ vendor/lib/teetz/d83c3c4a-9e8d-4e4e-ad30-9d40e137f689.ta
 vendor/lib/teetz/e043cde0-61d0-11e5-9c26-0002a5d5c51b.ta
 vendor/lib/teetz/e92a43ab-b4c8-4450-aa12-b1516259613b.ta
 vendor/lib/teetz/ff2a4bea-ef6d-11e6-89cc-d4ae52a7b3b3.ta
+
+## Wi-Fi
+vendor/lib/libwifi-hal-default.so
+
+## Wi-Fi firmware
+vendor/firmware/mt7663_usb/EEPROM_MT7663.bin:vendor/lib/firmware/EEPROM_MT7663.bin
+vendor/firmware/mt7663_usb/TxPwrLimit_MT76x3.dat:vendor/lib/firmware/TxPwrLimit_MT76x3.dat
+vendor/firmware/mt7663_usb/WIFI_RAM_CODE_MT7663.bin:vendor/lib/firmware/WIFI_RAM_CODE_MT7663.bin
+vendor/firmware/mt7663_usb/wifi.cfg:vendor/lib/firmware/wifi_mt7663.cfg
+vendor/firmware/regulatory.db:vendor/lib/firmware/regulatory.db
+vendor/firmware/regulatory.db.p7s:vendor/lib/firmware/regulatory.db.p7s
