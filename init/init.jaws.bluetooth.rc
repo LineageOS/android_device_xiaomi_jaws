@@ -1,0 +1,17 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+# Stock imports this from init.amlogic.board.rc. It pulls in
+# bt_platform_server, which detects the BT chip, loads its driver and sets
+# persist.vendor.xiaomi.bt_vendor for the Bluetooth HAL.
+import /vendor/etc/init/hw/init.xiaomi.bluetooth.rc
+
+# The MT7663 (Wi-Fi + BT over USB) is held off by its power/reset line,
+# GPIOX_6 = gpio481 (wlpm_dev gpio_reset). Stock drives it with Xiaomi's
+# wlpm.ko; without that the chip can stay off, e.g. after a warm reboot.
+# Needs CONFIG_GPIO_SYSFS.
+on init
+    write /sys/class/gpio/export 481
+    write /sys/class/gpio/gpio481/direction high
