@@ -75,7 +75,9 @@ key 156   BUTTON_9
 #key 216   BUTTON_10
 key 216   ALL_APPS
 #####AUIDO###############
-key 392   MITV_TV_AUDIO
+# MITV_TV_AUDIO is a Xiaomi framework keycode, unknown to AOSP; any
+# unknown label makes Android reject the entire file.
+# key 392   MITV_TV_AUDIO
 
 key 174     BACK
 key 402     CHANNEL_UP
