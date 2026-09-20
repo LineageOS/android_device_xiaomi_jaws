@@ -1,0 +1,12 @@
+# Bluetooth
+persist.vendor.xiaomi.bt.                         u:object_r:vendor_xiaomi_bluetooth_prop:s0
+persist.vendor.xiaomi.btvenname                   u:object_r:vendor_xiaomi_bluetooth_prop:s0
+persist.vendor.xiaomi.bt_driver                   u:object_r:vendor_xiaomi_bluetooth_prop:s0
+persist.vendor.xiaomi.bt_intf                     u:object_r:vendor_xiaomi_bluetooth_prop:s0
+persist.vendor.xiaomi.bt_pre_driver               u:object_r:vendor_xiaomi_bluetooth_prop:s0
+persist.vendor.xiaomi.bt_vendor                   u:object_r:vendor_xiaomi_bluetooth_prop:s0
+persist.vendor.xiaomi.load_bt_driver_param        u:object_r:vendor_xiaomi_bluetooth_prop:s0
+persist.vendor.xiaomi.load_bt_pre_driver_param    u:object_r:vendor_xiaomi_bluetooth_prop:s0
+
+vendor.xiaomi.bt_driver.    u:object_r:vendor_xiaomi_bluetooth_prop:s0
+vendor.xiaomi.bt.           u:object_r:vendor_xiaomi_bluetooth_prop:s0
