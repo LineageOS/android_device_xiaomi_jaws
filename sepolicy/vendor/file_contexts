@@ -1,0 +1,4 @@
+# Bluetooth
+/vendor/bin/hw/android\.hardware\.bluetooth@1\.1-service-xiaomi       u:object_r:hal_bluetooth_default_exec:s0
+
+/vendor/bin/bt_platform_server                                        u:object_r:bt_platform_server_exec:s0
