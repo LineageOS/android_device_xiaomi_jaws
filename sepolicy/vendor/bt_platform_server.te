@@ -1,0 +1,9 @@
+type bt_platform_server, domain;
+type bt_platform_server_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(bt_platform_server)
+
+# bt_platform_server checks whether btmtk_usb is already loaded
+allow bt_platform_server proc_modules:file r_file_perms;
+
+set_prop(bt_platform_server, vendor_xiaomi_bluetooth_prop)
