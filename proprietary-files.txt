@@ -30,8 +30,8 @@ vendor/lib/libamavutils.so
 vendor/lib/liboemcrypto.so
 vendor/lib/libsecmem.so
 
-## Firmware
-vendor/lib/firmware/video/video_ucode.bin
+## Firmware - from onn/jarvis/SNA:14/URO4.260304.011.B1/15051976:user/release-keys
+vendor/lib/firmware/video/video_ucode.bin|bef106affdf7dbc459e2938eacf1b786cae03b44
 
 ## Netflix
 product/etc/sysconfig/netflix.xml
