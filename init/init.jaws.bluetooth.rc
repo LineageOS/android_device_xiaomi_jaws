@@ -5,12 +5,6 @@
 
 import /vendor/etc/init/hw/init.xiaomi.bluetooth.rc
 
-# The MT7663 chip (Wi-Fi + BT over USB) is held off by its power/reset line,
-# GPIOX_6 = gpio481 (wlpm_dev gpio_reset). Stock drives it with Xiaomi's
-# wlpm.ko; without that the chip can stay off, e.g. after a warm reboot.
 on init
-    write /sys/class/gpio/export 481
-    write /sys/class/gpio/gpio481/direction high
-
     # Don't use DroidLogic's Bluetooth HAL
     stop vendor.bluetooth-1-1-droidlogic
