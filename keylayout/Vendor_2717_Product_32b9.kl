@@ -58,15 +58,15 @@ key 113   VOLUME_MUTE
 #####ALL APPS############
 #####KEY_MI##############
 key 399   BUTTON_4
-key 580   BUTTON_5
-key 150   BUTTON_5
+key 580   SETTINGS
+key 150   SETTINGS
 #####KEY_NETFLIX#########
-key 240   BUTTON_6
-key 416   BUTTON_6
-#key 393   BUTTON_6
+key 240   BUTTON_4
+key 416   BUTTON_4
+#key 393   BUTTON_4
 #####KEY_PRIMEVIDEO######
 #key 207   BUTTON_2
-key 207   BUTTON_7
+key 207   BUTTON_5
 #####KEY_LIVETV##########
 #####KEY_CHLIST##########
 key 393   BUTTON_3
