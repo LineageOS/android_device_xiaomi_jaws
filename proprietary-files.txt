@@ -1,10 +1,6 @@
 ## All blobs from this list, unless pinned and noted as otherwise,
 ## are from jaws (V816.0.26.4.17.UZFAABX).
 
-## Audio
-odm/lib/libHwAudio_dcvdec.so
-odm/lib/libHwAudio_dtshd.so;DISABLE_CHECKELF
-
 ## Display
 vendor/etc/mesondisplay.cfg
 vendor/etc/mesondisplay.cfg:recovery/root/system/etc/mesondisplay.cfg
