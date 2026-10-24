@@ -4,6 +4,10 @@
     "target_path": "device/amlogic/ne-common"
   },
   {
+    "repository": "android_kernel_amlogic_bt-modules",
+    "target_path": "kernel/platform/kernel-5.15/vendor/amlogic/bt-modules"
+  },
+  {
     "repository": "android_kernel_amlogic_mtk-drivers_mt7663u",
     "target_path": "kernel/platform/kernel-5.15/vendor/amlogic/mtk-drivers/mt7663u"
   },
