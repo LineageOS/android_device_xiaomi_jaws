@@ -26,9 +26,14 @@ PRODUCT_PACKAGES += \
 ## Platform
 TARGET_AMLOGIC_SOC := sc2
 
+# Remote control
+PRODUCT_PACKAGES += \
+    ble-remote-scanner
+
 ## Soong Namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    hardware/xiaomi
 
 ## Wi-Fi
 PRODUCT_PACKAGES += \

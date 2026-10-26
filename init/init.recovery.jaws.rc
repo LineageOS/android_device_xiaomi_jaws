@@ -16,3 +16,11 @@ on property:sys.usb.config=fastboot
 
 on property:sys.usb.config=sideload
     write /sys/class/usb_role/amlogic-usb-role-switch/role device
+
+# BLE advertisement scanner
+service jaws-remote-input /sbin/ble-remote-scanner
+    oneshot
+    user root
+    group root
+    seclabel u:r:recovery:s0
+    stdio_to_kmsg
