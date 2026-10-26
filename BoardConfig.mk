@@ -30,6 +30,8 @@ BOARD_SUPER_PARTITION_SIZE := 2202009600
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 ## SELinux
+include hardware/xiaomi/sepolicy/SEPolicy.mk
+
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 ## Wi-Fi

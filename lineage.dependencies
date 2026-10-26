@@ -4,6 +4,10 @@
     "target_path": "device/amlogic/ne-common"
   },
   {
+    "repository": "android_hardware_xiaomi",
+    "target_path": "hardware/xiaomi"
+  },
+  {
     "repository": "android_kernel_amlogic_bt-modules",
     "target_path": "kernel/platform/kernel-5.15/vendor/amlogic/bt-modules"
   },
