@@ -15,9 +15,12 @@ vendor/lib/libbluetooth_mtk_mi.so
 vendor/lib/libbt-vendor-mtk.so
 
 ## Bluetooth firmware
-vendor/firmware/bt_7663.cfg:vendor/lib/firmware/bt_7663.cfg
 vendor/firmware/mt7663_usb/mt7663_patch_e1_hdr.bin:vendor/lib/firmware/mt7663_patch_e1_hdr.bin
+vendor/firmware/mt7663_usb/mt7663_patch_e1_hdr.bin:recovery/root/lib/firmware/mt7663_patch_e1_hdr.bin
 vendor/firmware/mt7663_usb/mt7663_patch_e2_hdr.bin:vendor/lib/firmware/mt7663_patch_e2_hdr.bin
+vendor/firmware/mt7663_usb/mt7663_patch_e2_hdr.bin:recovery/root/lib/firmware/mt7663_patch_e2_hdr.bin
+vendor/firmware/bt_7663.cfg:vendor/lib/firmware/bt_7663.cfg
+vendor/firmware/bt_7663.cfg:vendor/lib/firmware/bt_7663.cfg:recovery/root/lib/firmware/bt_7663.cfg
 
 ## DRM
 vendor/lib/libamavutils.so

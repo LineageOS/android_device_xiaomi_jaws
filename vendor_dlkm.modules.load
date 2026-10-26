@@ -1,6 +1,5 @@
 amlogic-spi.ko
 amlogic-crypto-dma.ko
-amlogic-wireless.ko
 sha1-ce.ko
 clk-scmi.ko
 mdio-mux.ko
@@ -63,5 +62,4 @@ amlogic-snd-soc.ko
 amlogic-snd-codec-t9015.ko
 cfg80211.ko
 mac80211.ko
-btmtk_usb.ko
 wlan_mt7663_usb.ko
