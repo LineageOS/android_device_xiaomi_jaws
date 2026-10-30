@@ -34,6 +34,24 @@
       "parentUuid": "e4bb40df_2c575155",
       "revId": "9e4cd677831c7c5d5a03a60ff64a6ad7c262a844",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8e2154fc_de97a6e7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 38503
+      },
+      "writtenOn": "2026-10-30T22:47:28Z",
+      "side": 1,
+      "message": "the app itself is a standalone app made by REing Xiaomi\u0027s remote programming, since lineage OS or AOSP lacked a FOSS app, and the setting\u0027s \"Remotes and Accessories\" has a hook to specify a Remote buttons Setup app (from AOSP i belive), so it is done via an overlay apk.\ni am still looking for a place to submit the changes",
+      "parentUuid": "e4bb40df_2c575155",
+      "revId": "9e4cd677831c7c5d5a03a60ff64a6ad7c262a844",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ],
   "submitRequirementResults": [
