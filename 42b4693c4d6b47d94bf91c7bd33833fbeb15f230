@@ -24,6 +24,30 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "95d52b78_7a827a0c",
+        "filename": "rro_overlays/FrameworksOverlay/res/values/config.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-10-30T22:14:21Z",
+      "side": 1,
+      "message": "Gotta live with it.",
+      "parentUuid": "cac430c4_33ca833e",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 26,
+        "endChar": 8
+      },
+      "revId": "42b4693c4d6b47d94bf91c7bd33833fbeb15f230",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "dead3d7e_5d778f0c",
@@ -37,6 +61,30 @@
       "writtenOn": "2026-10-30T21:52:26Z",
       "side": 1,
       "message": "Why include screenshot here? GlobalActionsDialogLite already hides this action when UiModeManager reports UI_MODE_TYPE_TELEVISION, so it won\u0027t appear on Android TV anyway.",
+      "range": {
+        "startLine": 27,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 31
+      },
+      "revId": "42b4693c4d6b47d94bf91c7bd33833fbeb15f230",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4e120368_5c9ba96d",
+        "filename": "rro_overlays/FrameworksOverlay/res/values/config.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-10-30T22:14:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dead3d7e_5d778f0c",
       "range": {
         "startLine": 27,
         "startChar": 0,
