@@ -16,6 +16,24 @@
       "message": "Need to add also reboot to fastboot.",
       "revId": "16054417dfadb2d35ae781af9e3f2c1b6b7dcb70",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9c6f2590_e63be681",
+        "filename": "rro_overlays/FrameworksOverlay/res/values/config.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-10-30T21:16:27Z",
+      "side": 1,
+      "message": "Nevermind, I was thinking about config_restartActionsList.",
+      "parentUuid": "ea3dfd7f_52bbc22d",
+      "revId": "16054417dfadb2d35ae781af9e3f2c1b6b7dcb70",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
