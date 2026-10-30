@@ -48,6 +48,30 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4dbc4bdb_b21c1e4d",
+        "filename": "rro_overlays/FrameworksOverlay/res/values/config.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2026-10-30T22:50:51Z",
+      "side": 1,
+      "message": "Does atv even have power menu customization UI?",
+      "parentUuid": "95d52b78_7a827a0c",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 26,
+        "endChar": 8
+      },
+      "revId": "42b4693c4d6b47d94bf91c7bd33833fbeb15f230",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "dead3d7e_5d778f0c",
