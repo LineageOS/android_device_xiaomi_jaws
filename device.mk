@@ -7,6 +7,10 @@
 PRODUCT_PACKAGES += \
     BluetoothOverlayTarget
 
+## Framework
+PRODUCT_PACKAGES += \
+    FrameworksOverlayTarget
+
 ## Init
 PRODUCT_PACKAGES += \
     init.jaws.bluetooth.rc \

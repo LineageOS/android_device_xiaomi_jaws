@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Only offer restart: after a full power off the box can't be turned back on
+         without unplugging it -->
+    <string-array translatable="false" name="config_globalActionsList">
+        <item>restart</item>
+    </string-array>
+</resources>
