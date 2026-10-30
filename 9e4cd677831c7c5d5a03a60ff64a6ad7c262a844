@@ -1,5 +1,23 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e4bb40df_2c575155",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-10-30T22:39:57Z",
+      "side": 1,
+      "message": "I saw your last post regarding IR remote functionality. That seems great, but where did you get those APKs?",
+      "revId": "9e4cd677831c7c5d5a03a60ff64a6ad7c262a844",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
