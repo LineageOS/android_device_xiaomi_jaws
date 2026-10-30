@@ -16,6 +16,24 @@
       "message": "By the way, are you \"algrrr\" from 4pda.to forums?",
       "revId": "083a11dc8fb184925a94a58b59e309f8bb70f582",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d44a1e0f_b60d51db",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 38503
+      },
+      "writtenOn": "2026-10-30T22:38:03Z",
+      "side": 1,
+      "message": "yes that\u0027s me, it seemed like the best place to find jaws users, can you check my latest post, i am trying to implement the IR remote functionality.",
+      "parentUuid": "fa7e59bd_ead9b1e8",
+      "revId": "083a11dc8fb184925a94a58b59e309f8bb70f582",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
