@@ -13,7 +13,8 @@ PRODUCT_PACKAGES += \
 
 ## IR remote control
 PRODUCT_PACKAGES += \
-    RemoteButtons
+    RemoteButtons \
+    TvSettingsOverlayTarget
 
 ## Init
 PRODUCT_PACKAGES += \
