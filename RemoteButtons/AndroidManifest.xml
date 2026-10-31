@@ -3,9 +3,14 @@
      SPDX-FileCopyrightText: The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <!-- Reads the stock firmware's IR database from USB drives -->
+    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
 
     <uses-feature
         android:name="android.hardware.bluetooth_le"
@@ -39,6 +44,11 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
+        <!-- Database choice from the TV Settings page -->
+        <receiver
+            android:name=".settings.DatabaseChoiceReceiver"
+            android:exported="false" />
 
         <!-- TV Settings > Remotes & Accessories > Set up remote buttons -->
         <provider

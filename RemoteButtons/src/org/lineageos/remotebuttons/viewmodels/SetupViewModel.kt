@@ -9,12 +9,16 @@ import android.app.Application
 import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import org.lineageos.remotebuttons.audio.TestTone
 import org.lineageos.remotebuttons.database.Brand
+import org.lineageos.remotebuttons.database.xiaomi.XiaomiIrDatabaseImporter
+import org.lineageos.remotebuttons.R
 import org.lineageos.remotebuttons.ir.CodeSet
 import org.lineageos.remotebuttons.ir.DeviceType
 import org.lineageos.remotebuttons.remote.RemoteProgrammers
@@ -48,15 +52,15 @@ class SetupViewModel(application: Application) : AndroidViewModel(application) {
     private var brand: Brand? = null
     private var job: Job? = null
 
-    suspend fun brands(type: DeviceType) = repository.database.brands(type)
+    suspend fun brands(type: DeviceType) = repository.database().brands(type)
 
-    suspend fun popularBrands(type: DeviceType) = repository.database.popularBrands(type)
+    suspend fun popularBrands(type: DeviceType) = repository.database().popularBrands(type)
 
     fun startPairing(type: DeviceType, brand: Brand) {
         this.brand = brand
         job?.cancel()
         job = viewModelScope.launch {
-            codeSets = repository.database.codeSets(type, brand)
+            codeSets = repository.database().codeSets(type, brand)
             tryCodeSet(0)
         }
     }
@@ -101,6 +105,14 @@ class SetupViewModel(application: Application) : AndroidViewModel(application) {
         }
         repository.setConfigured(null)
     }.onFailure { Log.e(TAG, "Clearing the remote failed", it) }
+
+    suspend fun importDatabase(): Result<XiaomiIrDatabaseImporter.Result> = withContext(Dispatchers.IO) {
+        runCatching {
+            val importer = XiaomiIrDatabaseImporter(getApplication(), repository.xiaomiDatabase)
+            val source = importer.findSource() ?: error(getApplication<Application>().getString(R.string.import_not_found))
+            importer.import(source)
+        }.onFailure { Log.e(TAG, "Import failed", it) }
+    }
 
     private fun currentIndex() = when (val p = _pairing.value) {
         is Pairing.Programming -> p.index

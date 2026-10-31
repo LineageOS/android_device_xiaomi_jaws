@@ -16,6 +16,12 @@
     <string name="action_set_up">Set up</string>
     <string name="action_clear">Clear setup</string>
 
+    <!-- IR code database choice -->
+    <string name="action_database">IR code database</string>
+    <string name="database_open">Open database (Flipper-IRDB)</string>
+    <string name="database_imported">Imported from stock firmware</string>
+    <string name="action_import">Import from stock firmware</string>
+    <string name="database_not_imported">Not imported yet</string>
 
     <!-- Setup: before the first code is sent -->
     <string name="notice_title">Control your TV with this remote</string>
@@ -58,4 +64,15 @@
     <string name="clear_description">Removes the infrared codes from the remote, including codes set up by other apps. The remote will stop controlling your device until it is set up again.</string>
     <string name="clear_done">Remote setup cleared</string>
     <string name="clear_failed">Couldn\'t reach the remote</string>
+
+    <!-- Importing the stock Xiaomi IR database. MiTvSetupCustomizer.apk and Download are file and folder names. %1$d: number of brands, %2$d: number of code sets -->
+    <string name="import_title">Import the stock IR database</string>
+    <string name="import_description">The stock Xiaomi firmware has codes for more brands. Copy MiTvSetupCustomizer.apk from your own stock firmware to the Download folder or to a USB drive, then choose Import.</string>
+    <string name="import_not_found">MiTvSetupCustomizer.apk wasn\'t found. Put it in the Download folder, or at the top level of a USB drive and make sure the drive is plugged in.</string>
+    <string name="action_allow_files">Allow access to files</string>
+    <string name="action_allow_files_description">Needed to read the file from Download or a USB drive</string>
+    <string name="import_busy">Importing…</string>
+    <string name="import_done_title">Database imported</string>
+    <string name="import_done_description">%1$d brands, %2$d code sets.</string>
+    <string name="import_failed_title">Import failed</string>
 </resources>
