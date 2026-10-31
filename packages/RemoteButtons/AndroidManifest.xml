@@ -7,7 +7,6 @@
     package="org.lineageos.remotebuttons">
 
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
-
     <uses-feature
         android:name="android.hardware.bluetooth_le"
         android:required="true" />
@@ -40,6 +39,11 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
+        <!-- Database choice from the TV Settings page -->
+        <receiver
+            android:name=".settings.DatabaseChoiceReceiver"
+            android:exported="false" />
 
         <!-- TV Settings > Remotes & Accessories > Set up remote buttons -->
         <provider

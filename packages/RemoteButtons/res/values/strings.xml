@@ -16,6 +16,11 @@
     <string name="action_set_up">Set up</string>
     <string name="action_clear">Clear setup</string>
 
+    <!-- IR code database choice -->
+    <string name="action_database">IR code database</string>
+    <string name="database_open">Open database (Flipper-IRDB)</string>
+    <string name="database_xiaomi">Xiaomi stock database</string>
+
     <!-- Setup: before the first code is sent -->
     <string name="notice_title">Control your TV with this remote</string>
     <string name="notice_description">Codes will be tried one by one. Music plays during each try so you can hear whether the remote changes the volume. Make sure the sound is not muted.</string>
@@ -57,4 +62,5 @@
     <string name="clear_description">Removes the infrared codes from the remote, including codes set up by other apps. The remote will stop controlling your device until it is set up again.</string>
     <string name="clear_done">Remote setup cleared</string>
     <string name="clear_failed">Couldn\'t reach the remote</string>
+
 </resources>
