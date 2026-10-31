@@ -1,0 +1,7 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+# Remote programmers are looked up by name from config_remoteProgrammers.
+-keep class * implements org.lineageos.remotebuttons.remote.RemoteProgrammer$Factory { <init>(); }

@@ -30,6 +30,10 @@ PRODUCT_PACKAGES += \
 ## Platform
 TARGET_AMLOGIC_SOC := sc2
 
+## Remote buttons
+PRODUCT_PACKAGES += \
+    RemoteButtons
+
 ## Soong Namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
