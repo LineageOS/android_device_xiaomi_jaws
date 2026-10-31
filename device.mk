@@ -11,6 +11,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     FrameworksOverlayTarget
 
+## IR remote control
+PRODUCT_PACKAGES += \
+    TvSettingsOverlayTarget \
+    XiaomiRemoteButtons
+
 ## Init
 PRODUCT_PACKAGES += \
     init.jaws.bluetooth.rc \
