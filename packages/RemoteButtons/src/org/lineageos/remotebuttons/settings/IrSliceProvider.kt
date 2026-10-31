@@ -15,15 +15,17 @@ import androidx.slice.Slice
 import androidx.slice.SliceProvider
 import com.android.tv.twopanelsettings.slices.builders.PreferenceSliceBuilder
 import com.android.tv.twopanelsettings.slices.builders.PreferenceSliceBuilder.RowBuilder
+import kotlinx.coroutines.runBlocking
 import org.lineageos.remotebuttons.MainActivity
 import org.lineageos.remotebuttons.R
 import org.lineageos.remotebuttons.repository.SetupRepository
 
 /**
- * The "Set up remote buttons" page of TV Settings > Remotes & Accessories.
+ * The "Set up remote buttons" page of TV Settings > Remotes & Accessories, and its IR code
+ * database sub-page.
  *
  * TV Settings shows the entry when its `bluetooth_ir_entry_slice_uri` string points at this
- * provider (set with a resource overlay in the device tree) and renders this slice in its
+ * provider (set with a resource overlay in the device tree) and renders these slices in its
  * panels. TV Settings holds WRITE_SECURE_SETTINGS, so it is granted access without a prompt.
  */
 class IrSliceProvider : SliceProvider(Manifest.permission.WRITE_SECURE_SETTINGS) {
@@ -37,8 +39,10 @@ class IrSliceProvider : SliceProvider(Manifest.permission.WRITE_SECURE_SETTINGS)
         val oldPolicy = StrictMode.getThreadPolicy()
         StrictMode.setThreadPolicy(StrictMode.ThreadPolicy.LAX)
         return try {
+            val repository = SetupRepository(context)
             when (sliceUri.path) {
-                PATH_MAIN -> mainSlice(context, sliceUri, SetupRepository(context))
+                PATH_MAIN -> mainSlice(context, sliceUri, repository)
+                PATH_DATABASE -> databaseSlice(context, sliceUri, repository)
                 else -> null
             }
         } finally {
@@ -46,8 +50,9 @@ class IrSliceProvider : SliceProvider(Manifest.permission.WRITE_SECURE_SETTINGS)
         }
     }
 
-    private fun mainSlice(context: Context, sliceUri: Uri, repository: SetupRepository): Slice =
-        PreferenceSliceBuilder(context, sliceUri)
+    private fun mainSlice(context: Context, sliceUri: Uri, repository: SetupRepository): Slice {
+        val usesImported = runBlocking { repository.usesImportedDatabase() }
+        return PreferenceSliceBuilder(context, sliceUri)
             .addScreenTitle(RowBuilder().setTitle(context.getString(R.string.settings_title)))
             .addPreference(
                 RowBuilder()
@@ -66,7 +71,45 @@ class IrSliceProvider : SliceProvider(Manifest.permission.WRITE_SECURE_SETTINGS)
                     .setTitle(context.getString(R.string.action_clear))
                     .setPendingIntent(launch(context, MainActivity.START_CLEAR)),
             )
+            .addPreference(
+                RowBuilder()
+                    .setKey(KEY_DATABASE)
+                    .setTitle(context.getString(R.string.action_database))
+                    .setSubtitle(
+                        context.getString(if (usesImported) R.string.database_imported else R.string.database_open),
+                    )
+                    .setTargetSliceUri(uri(context, PATH_DATABASE).toString()),
+            )
             .build()
+    }
+
+    private fun databaseSlice(context: Context, sliceUri: Uri, repository: SetupRepository): Slice {
+        val imported = runBlocking { repository.xiaomiDatabase.isPopulated() }
+        val usesImported = imported && repository.useImportedDatabase
+        return PreferenceSliceBuilder(context, sliceUri)
+            .addScreenTitle(RowBuilder().setTitle(context.getString(R.string.action_database)))
+            .addPreference(
+                RowBuilder()
+                    .setKey(KEY_USE_OPEN)
+                    .setTitle(context.getString(R.string.database_open))
+                    .addRadioButton(choose(context, useImported = false), !usesImported, RADIO_GROUP_DATABASE),
+            )
+            .addPreference(
+                RowBuilder()
+                    .setKey(KEY_USE_IMPORTED)
+                    .setTitle(context.getString(R.string.database_imported))
+                    .apply { if (!imported) setSubtitle(context.getString(R.string.database_not_imported)) }
+                    .setEnabled(imported)
+                    .addRadioButton(choose(context, useImported = true), usesImported, RADIO_GROUP_DATABASE),
+            )
+            .addPreference(
+                RowBuilder()
+                    .setKey(KEY_IMPORT)
+                    .setTitle(context.getString(R.string.action_import))
+                    .setPendingIntent(launch(context, MainActivity.START_IMPORT)),
+            )
+            .build()
+    }
 
     private fun launch(context: Context, start: String): PendingIntent = PendingIntent.getActivity(
         context,
@@ -77,17 +120,33 @@ class IrSliceProvider : SliceProvider(Manifest.permission.WRITE_SECURE_SETTINGS)
         PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT,
     )
 
+    private fun choose(context: Context, useImported: Boolean): PendingIntent = PendingIntent.getBroadcast(
+        context,
+        if (useImported) 1 else 0,
+        Intent(context, DatabaseChoiceReceiver::class.java)
+            .putExtra(DatabaseChoiceReceiver.EXTRA_USE_IMPORTED, useImported),
+        PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT,
+    )
+
     companion object {
         private const val PATH_MAIN = "/ir"
+        private const val PATH_DATABASE = "/ir/database"
         private const val KEY_SETUP = "setup"
         private const val KEY_CLEAR = "clear"
+        private const val KEY_DATABASE = "database"
+        private const val KEY_USE_OPEN = "use_open"
+        private const val KEY_USE_IMPORTED = "use_imported"
+        private const val KEY_IMPORT = "import"
+        private const val RADIO_GROUP_DATABASE = "database"
 
         private fun uri(context: Context, path: String): Uri =
             Uri.parse("content://${context.getString(R.string.slice_authority)}$path")
 
-        /** Asks TV Settings to redraw the page. */
+        /** Asks TV Settings to redraw the pages. */
         fun notifyChanged(context: Context) {
-            context.contentResolver.notifyChange(uri(context, PATH_MAIN), null)
+            listOf(PATH_MAIN, PATH_DATABASE).forEach {
+                context.contentResolver.notifyChange(uri(context, it), null)
+            }
         }
     }
 }
