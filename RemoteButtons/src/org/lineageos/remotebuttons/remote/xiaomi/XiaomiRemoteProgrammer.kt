@@ -31,14 +31,16 @@ class XiaomiRemoteProgrammer : RemoteProgrammer {
     override fun supports(codeSet: CodeSet) = codeSet.keys.values.all { code ->
         when (code) {
             is IrCode.Protocol -> XiaomiIrEncoder.encode(code) != null
+            is IrCode.Raw -> code.format == RAW_FORMAT && codeSet.rawParameters != null
         }
     }
 
     override suspend fun program(session: GattSession, codeSet: CodeSet) {
-        var descriptor: String? = null
+        var descriptor = codeSet.rawParameters
         val keys = KEY_ORDER.map { (key, type) ->
             val data = when (val code = codeSet.keys[key]) {
                 null -> ""
+                is IrCode.Raw -> code.data
                 is IrCode.Protocol -> {
                     val encoded = requireNotNull(XiaomiIrEncoder.encode(code)) { "Unsupported code $code" }
                     // All keys of a set share the protocol, hence the descriptor.
@@ -72,6 +74,9 @@ class XiaomiRemoteProgrammer : RemoteProgrammer {
     }
 
     companion object {
+        /** [IrCode.Raw.format] of codes from the stock Xiaomi database. */
+        const val RAW_FORMAT = "xiaomi"
+
         val SERVICE: UUID = UUID.fromString("0000a00a-0000-1000-8000-00805f9b34fb")
         val KEY_CHAR: UUID = UUID.fromString("0000b005-0000-1000-8000-00805f9b34fb")
         val PARAM_CHAR: UUID = UUID.fromString("0000c001-0000-1000-8000-00805f9b34fb")

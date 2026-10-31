@@ -16,6 +16,7 @@ import androidx.leanback.app.GuidedStepSupportFragment
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.launch
 import org.lineageos.remotebuttons.fragments.ClearFragment
+import org.lineageos.remotebuttons.fragments.ImportFragment
 import org.lineageos.remotebuttons.fragments.NoticeFragment
 import org.lineageos.remotebuttons.fragments.WelcomeFragment
 import org.lineageos.remotebuttons.remote.RemoteProgrammers
@@ -62,14 +63,16 @@ class MainActivity : FragmentActivity() {
         when (intent.getStringExtra(EXTRA_START)) {
             START_SETUP -> NoticeFragment()
             START_CLEAR -> ClearFragment()
+            START_IMPORT -> ImportFragment()
             else -> null
         }
 
     companion object {
-        /** Step to open from the TV Settings page: [START_SETUP] or [START_CLEAR]. */
+        /** Step to open from the TV Settings page: [START_SETUP], [START_CLEAR] or [START_IMPORT]. */
         const val EXTRA_START = "start"
         const val START_SETUP = "setup"
         const val START_CLEAR = "clear"
+        const val START_IMPORT = "import"
         const val START_PROBE = "probe"
     }
 }
