@@ -16,6 +16,24 @@
       "message": "this keeps TV compatibility on-par with stock.\nShould we drop IRDB-flipper ?",
       "revId": "3dd07850c5fc3d6880bcfe03f7bee79bc945f46a",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "50afad7f_a0a1cd56",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-10-31T10:03:17Z",
+      "side": 1,
+      "message": "Yes, I think we should drop Flipper-IRDB for the sake of licensing issues.",
+      "parentUuid": "6193f3fc_b1685832",
+      "revId": "3dd07850c5fc3d6880bcfe03f7bee79bc945f46a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
