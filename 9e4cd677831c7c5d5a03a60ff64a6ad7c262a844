@@ -52,6 +52,24 @@
       "parentUuid": "e4bb40df_2c575155",
       "revId": "9e4cd677831c7c5d5a03a60ff64a6ad7c262a844",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c05f1b08_f1ca26b0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-10-31T01:38:45Z",
+      "side": 1,
+      "message": "Please submit it to this device tree. If we find that it can used with other Xiaomi boxes, we can then move it to hardware/xiaomi.",
+      "parentUuid": "8e2154fc_de97a6e7",
+      "revId": "9e4cd677831c7c5d5a03a60ff64a6ad7c262a844",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ],
   "submitRequirementResults": [
