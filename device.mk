@@ -11,6 +11,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     FrameworksOverlayTarget
 
+## IR remote control
+PRODUCT_PACKAGES += \
+    RemoteButtons
+
 ## Init
 PRODUCT_PACKAGES += \
     init.jaws.bluetooth.rc \
