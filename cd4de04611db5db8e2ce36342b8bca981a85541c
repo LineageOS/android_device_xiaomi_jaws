@@ -70,6 +70,24 @@
       "parentUuid": "50f1b643_a66bfdde",
       "revId": "cd4de04611db5db8e2ce36342b8bca981a85541c",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cea55b84_3cda1e0a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-10-31T09:51:20Z",
+      "side": 1,
+      "message": "I am more worried about Flipper-IRDB licensing. Let\u0027s try this instead: https://review.lineageos.org/c/LineageOS/android_device_xiaomi_jaws/+/511280",
+      "parentUuid": "66da7328_c070bc52",
+      "revId": "cd4de04611db5db8e2ce36342b8bca981a85541c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
