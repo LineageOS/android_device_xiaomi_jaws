@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Remotes & Accessories > Set up remote buttons, provided by RemoteButtons -->
+    <string name="bluetooth_ir_entry_slice_uri" translatable="false">content://org.lineageos.remotebuttons.slice/ir</string>
+</resources>

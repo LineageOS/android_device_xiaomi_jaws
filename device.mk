@@ -32,7 +32,8 @@ TARGET_AMLOGIC_SOC := sc2
 
 ## Remote buttons
 PRODUCT_PACKAGES += \
-    RemoteButtons
+    RemoteButtons \
+    TvSettingsOverlayTarget
 
 ## Soong Namespaces
 PRODUCT_SOONG_NAMESPACES += \
