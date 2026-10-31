@@ -48,15 +48,15 @@ class SetupViewModel(application: Application) : AndroidViewModel(application) {
     private var brand: Brand? = null
     private var job: Job? = null
 
-    suspend fun brands(type: DeviceType) = repository.database.brands(type)
+    suspend fun brands(type: DeviceType) = repository.database().brands(type)
 
-    suspend fun popularBrands(type: DeviceType) = repository.database.popularBrands(type)
+    suspend fun popularBrands(type: DeviceType) = repository.database().popularBrands(type)
 
     fun startPairing(type: DeviceType, brand: Brand) {
         this.brand = brand
         job?.cancel()
         job = viewModelScope.launch {
-            codeSets = repository.database.codeSets(type, brand)
+            codeSets = repository.database().codeSets(type, brand)
             tryCodeSet(0)
         }
     }

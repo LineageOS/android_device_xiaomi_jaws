@@ -41,6 +41,11 @@
             </intent-filter>
         </activity>
 
+        <!-- Database choice from the TV Settings page -->
+        <receiver
+            android:name=".settings.DatabaseChoiceReceiver"
+            android:exported="false" />
+
         <!-- TV Settings > Remotes & Accessories > Set up remote buttons -->
         <provider
             android:name=".settings.IrSliceProvider"
