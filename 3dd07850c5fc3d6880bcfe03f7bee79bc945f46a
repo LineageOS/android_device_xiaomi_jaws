@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6193f3fc_b1685832",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 38503
+      },
+      "writtenOn": "2026-10-31T09:56:47Z",
+      "side": 1,
+      "message": "this keeps TV compatibility on-par with stock.\nShould we drop IRDB-flipper ?",
+      "revId": "3dd07850c5fc3d6880bcfe03f7bee79bc945f46a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
