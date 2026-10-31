@@ -16,6 +16,24 @@
       "message": "This is nice and all, but why can\u0027t we just ship stock\u0027s IR database withint this app?",
       "revId": "cd4de04611db5db8e2ce36342b8bca981a85541c",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8574ded4_e8593eb5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 38503
+      },
+      "writtenOn": "2026-10-31T09:31:46Z",
+      "side": 1,
+      "message": "No, it is not possible, what I did here is make the user import the stock apk and extract the database so it becomes a second codes provider with a much larger db (2000ish models vs 200) than irdb-flipper, we can leave out since it adds file permissions too.",
+      "parentUuid": "5837855e_3fbb6135",
+      "revId": "cd4de04611db5db8e2ce36342b8bca981a85541c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
