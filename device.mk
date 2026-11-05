@@ -19,6 +19,7 @@ PRODUCT_PACKAGES += \
 ## Init
 PRODUCT_PACKAGES += \
     init.jaws.bluetooth.rc \
+    init.jaws.led.rc \
     init.jaws.usb.rc \
     init.recovery.jaws.rc
 
