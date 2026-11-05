@@ -3,6 +3,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+on init
+    insmod /lib/modules/btmtk_usb.ko
+
 # Leave the PHY's automatic recovery policy active: start in device mode, wait
 # eight seconds for a DWC2 gadget connection, and remain there while an upstream
 # host is connected. If no host connects, or the host disconnects, switch to

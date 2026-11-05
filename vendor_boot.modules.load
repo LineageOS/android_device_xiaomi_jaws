@@ -10,5 +10,4 @@ amlogic-irblaster.ko
 amlogic-phy-debug.ko
 amlogic-inphy.ko
 amlogic-wireless.ko
-btmtk_usb.ko
 dwc_otg.ko

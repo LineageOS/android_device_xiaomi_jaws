@@ -18,10 +18,9 @@ TARGET_KERNEL_PLATFORM_TARGET := jaws
 TARGET_KERNEL_SOURCE := vendor/xiaomi/jaws-build
 
 ## Kernel modules
-BOOT_KERNEL_MODULES := $(strip $(shell cat $(DEVICE_PATH)/vendor_boot.modules.load))
-
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/vendor_dlkm.modules.load))
-BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(BOOT_KERNEL_MODULES)
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/vendor_boot.modules.load))
+BOOT_KERNEL_MODULES := $(strip $(shell cat $(DEVICE_PATH)/vendor_boot.modules.load $(DEVICE_PATH)/vendor_ramdisk.modules.include))
 
 ## Partitions
 BOARD_SUPER_PARTITION_SIZE := 2202009600
