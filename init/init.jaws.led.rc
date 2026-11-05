@@ -1,0 +1,19 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+# Mimic stock behaviour of the front LED: it blinks during boot, then stays on
+# (or off for a quiescent boot). It's turned off by gpio-leds while suspended.
+on early-boot
+    write /sys/class/leds/pwr_led/delay_on 500
+    write /sys/class/leds/pwr_led/delay_off 500
+    write /sys/class/leds/pwr_led/trigger timer
+
+on property:sys.boot_completed=1 && property:ro.boot.quiescent=
+    write /sys/class/leds/pwr_led/trigger none
+    write /sys/class/leds/pwr_led/brightness 1
+
+on property:sys.boot_completed=1 && property:ro.boot.quiescent=1
+    write /sys/class/leds/pwr_led/trigger none
+    write /sys/class/leds/pwr_led/brightness 0
