@@ -19,6 +19,11 @@ namespace_imports = [
 ]
 
 blob_fixups: blob_fixups_user_type = {
+    (
+        'recovery/root/lib/firmware/bt_7663.cfg',
+        'vendor/lib/firmware/bt_7663.cfg'
+    ): blob_fixup()
+        .add_line_if_missing('\nSUPPORT_MI_RC_WOBLE 1\n'),
     'vendor/bin/hw/android.hardware.security.keymint-service.amlogic': blob_fixup()
         .replace_needed('lib_android_keymaster_keymint_utils.so', 'lib_android_keymaster_akeymint_utils.so')
         .replace_needed('libkeymint.so', 'libakeymint.so')
