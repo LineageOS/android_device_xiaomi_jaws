@@ -7,10 +7,6 @@
 PRODUCT_PACKAGES += \
     BluetoothOverlayTarget
 
-## Frameworks
-PRODUCT_PACKAGES += \
-    FrameworksOverlayTarget
-
 ## IR remote control
 PRODUCT_PACKAGES += \
     TvSettingsOverlayTarget \
