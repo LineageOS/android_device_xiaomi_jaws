@@ -7,6 +7,12 @@
 PRODUCT_PACKAGES += \
     BluetoothOverlayTarget
 
+## Codecs
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/media/media_codecs_amlogic_audio_ac4.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_amlogic_audio_ac4.xml \
+    $(LOCAL_PATH)/configs/media/media_codecs_amlogic_dolby_vision.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_amlogic_dolby_vision.xml \
+    $(LOCAL_PATH)/configs/media/media_codecs_amlogic_performance_dolby_vision.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_amlogic_performance_dolby_vision.xml
+
 ## IR remote control
 PRODUCT_PACKAGES += \
     TvSettingsOverlayTarget \
