@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Put the device to sleep after 30 minutes without input -->
+    <integer name="def_sleep_timeout">1800000</integer>
+</resources>
