@@ -36,6 +36,10 @@ TARGET_AMLOGIC_SOC := sc2
 PRODUCT_PACKAGES += \
     ble-remote-scanner
 
+## Settings
+PRODUCT_PACKAGES += \
+    SettingsProviderOverlayTarget
+
 ## Soong Namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
