@@ -16,6 +16,24 @@
       "message": "Maybe we can move this to device/lineage/atv. What do you think @johnsonnolen@gmail.com?",
       "revId": "609cf5d73b0e9b6ebc6ec9e81196f664033d3f55",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4a816825_945c2737",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-11-07T03:16:01Z",
+      "side": 1,
+      "message": "Well, not quite.\n\nLook in GTV GMS, AlwaysOn is a feature set for hotword/picture frame, etc.\n\nI think its fine tho. GTV always on GMS could just override the RRO with its own.",
+      "parentUuid": "777ba42d_a36088d4",
+      "revId": "609cf5d73b0e9b6ebc6ec9e81196f664033d3f55",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
