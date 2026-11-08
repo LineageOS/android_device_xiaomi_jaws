@@ -1,0 +1,4 @@
+allow init dolby_ms12_mnt_file:dir mounton;
+allow init tmpfs:filesystem relabelfrom;
+allow init dolby_ms12_tmpfs:filesystem { mount remount relabelfrom relabelto };
+allow init dolby_ms12_tmpfs:dir { search getattr };

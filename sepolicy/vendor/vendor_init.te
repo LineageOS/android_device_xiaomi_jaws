@@ -1,0 +1,4 @@
+# init.jaws.dolby.rc
+allow vendor_init { audio_utils_device dolby_fw_device }:chr_file setattr;
+allow vendor_init dolby_ms12_tmpfs:dir search;
+allow vendor_init dolby_ms12_tmpfs:file setattr;

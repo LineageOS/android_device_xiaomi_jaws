@@ -8,6 +8,10 @@ PRODUCT_PACKAGES += \
     BluetoothOverlayTarget
 
 ## Codecs
+PRODUCT_PACKAGES += \
+    libdolbyms12.so_symlink \
+    vendor_ms12_mountpoint
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_codecs_amlogic_audio_ac4.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_amlogic_audio_ac4.xml \
     $(LOCAL_PATH)/configs/media/media_codecs_amlogic_dolby_vision.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_amlogic_dolby_vision.xml \
@@ -21,6 +25,7 @@ PRODUCT_PACKAGES += \
 ## Init
 PRODUCT_PACKAGES += \
     init.jaws.bluetooth.rc \
+    init.jaws.dolby.rc \
     init.jaws.led.rc \
     init.jaws.usb.rc \
     init.recovery.jaws.rc

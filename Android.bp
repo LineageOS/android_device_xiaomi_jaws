@@ -4,3 +4,17 @@
 //
 
 soong_namespace {}
+
+// Dolby MS12, decrypted at boot by init.jaws.dolby.rc
+mkdir {
+    name: "vendor_ms12_mountpoint",
+    dir: "lib/ms12",
+    vendor: true,
+}
+
+install_symlink {
+    name: "libdolbyms12.so_symlink",
+    vendor: true,
+    installed_location: "lib/libdolbyms12.so",
+    symlink_target: "/vendor/lib/ms12/libdolbyms12.so",
+}

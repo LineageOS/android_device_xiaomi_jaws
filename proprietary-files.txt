@@ -4,6 +4,7 @@
 ## Audio
 odm/lib/libHwAudio_dcvdec.so
 odm/lib/libHwAudio_dtshd.so;DISABLE_CHECKELF
+vendor/bin/dolby_fw_dolbyms12
 
 ## Display
 vendor/etc/mesondisplay.cfg

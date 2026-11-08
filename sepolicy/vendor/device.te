@@ -1,0 +1,2 @@
+type audio_utils_device, dev_type;
+type dolby_fw_device, dev_type;

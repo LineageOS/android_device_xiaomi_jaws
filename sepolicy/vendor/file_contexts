@@ -1,3 +1,9 @@
 # Bluetooth
 /vendor/bin/hw/android\.hardware\.bluetooth@1\.1-service-xiaomi       u:object_r:hal_bluetooth_default_exec:s0
 /vendor/bin/bt_platform_server                                        u:object_r:bt_platform_server_exec:s0
+
+# Dolby
+/dev/audio_utils                                                      u:object_r:audio_utils_device:s0
+/dev/dolby_fw                                                         u:object_r:dolby_fw_device:s0
+/vendor/bin/dolby_fw_dolbyms12                                        u:object_r:dolbyms12_exec:s0
+/vendor/lib/ms12                                                      u:object_r:dolby_ms12_mnt_file:s0
