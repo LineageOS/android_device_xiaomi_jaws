@@ -34,6 +34,7 @@ TARGET_AMLOGIC_SOC := sc2
 
 # Remote control
 PRODUCT_PACKAGES += \
+    XiaomiRemoteVoice \
     ble-remote-scanner
 
 ## Soong Namespaces
