@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4ef0f429_3f3a8fee",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-11-08T17:16:12Z",
+      "side": 1,
+      "message": "There\u0027s no reason to make this device-specific. The common change is here: https://review.lineageos.org/c/LineageOS/android_device_amlogic_ne-common/+/512631",
+      "revId": "a8e2f99f9bd2f2a65e0e9a9e4e5ddcb76079343c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
