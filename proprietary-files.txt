@@ -44,6 +44,13 @@ vendor/bin/hw/android.hardware.oemlock@1.0-service.droidlogic
 vendor/etc/init/android.hardware.oemlock@1.0-service.droidlogic.rc
 vendor/etc/vintf/manifest/android.hardware.oemlock@1.0-service.droidlogic.xml
 
+## Playready DRM
+vendor/bin/hw/android.hardware.drm@1.4-service.playready
+vendor/etc/init/android.hardware.drm@1.4-service.playready.rc
+vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.playready.xml
+vendor/lib/libplayready.so
+vendor/lib/libplayreadymediadrmplugin.so
+
 ## Remote Control
 vendor/etc/bluetooth/Vendor_2717_Product_32b9_Attribute_a0_00_Update.bin
 vendor/etc/bluetooth/Vendor_2717_Product_32b9_Attribute_a0_0e_Update.bin
