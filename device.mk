@@ -21,8 +21,8 @@ PRODUCT_PACKAGES += \
 
 ## Keylayout
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/keylayout/Vendor_0001_Product_0001.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0001_Product_0001.kl \
-    $(LOCAL_PATH)/keylayout/Vendor_2717_Product_32b9.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_2717_Product_32b9.kl
+    $(LOCAL_PATH)/configs/keylayout/Vendor_0001_Product_0001.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0001_Product_0001.kl \
+    $(LOCAL_PATH)/configs/keylayout/Vendor_2717_Product_32b9.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_2717_Product_32b9.kl
 
 ## Netflix
 PRODUCT_PACKAGES += \
