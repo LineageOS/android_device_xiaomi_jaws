@@ -4,6 +4,10 @@
     "target_path": "device/amlogic/ne-common"
   },
   {
+    "repository": "android_hardware_mediatek",
+    "target_path": "hardware/mediatek"
+  },
+  {
     "repository": "android_hardware_xiaomi",
     "target_path": "hardware/xiaomi"
   },

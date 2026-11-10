@@ -40,10 +40,12 @@ PRODUCT_PACKAGES += \
 ## Soong Namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
+    hardware/mediatek/wlan/wifi_hal \
     hardware/xiaomi
 
 ## Wi-Fi
 PRODUCT_PACKAGES += \
+    libwifi-hal-mediatek \
     wifi_vendor_hal.xml
 
 ## Inherit from the common tree product makefile
